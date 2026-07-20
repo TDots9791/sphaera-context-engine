@@ -38,7 +38,7 @@ Sphaera lets AI work from a current map of a project rather than an endless fold
 - **Context matched to each model.** A smaller window gets a shorter, guiding package; a larger window receives more connections and evidence. No separate data preparation is needed for each model.
 - **Works at scale.** Large repositories, long PDFs, tables, and document chains do not have to be read in full each time. The map updates affected data and guides AI to the relevant location without losing its link to the source.
 - **Code and documents in one working contour.** Sphaera handles common programming languages plus DOCX, PDF, XLSX/ODS, PPTX, XML, CSV/TSV, Markdown, HTML, and JSON.
-- **Russian language is a first-class case.** Sphaera is designed for Russian documents and Russian morphology: it accounts for word forms, Cyrillic, and professional abbreviations while preserving the original quotation. Search also supports English and Chinese material.
+- **Russian language is a first-class case.** Sphaera is designed for Russian documents and Russian morphology: it accounts for word forms, Cyrillic, and professional abbreviations while preserving the original quotation. English material is supported. Chinese material is indexed; a separate retrieval-quality benchmark for Chinese is in preparation.
 - **Context remains tied to evidence.** Important conclusions can be traced back to a line of code, page, paragraph, cell, or slide. After a source changes, related results can be identified for review.
 
 ### How the approach differs
