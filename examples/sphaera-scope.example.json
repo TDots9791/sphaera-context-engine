@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "include": [
+    "src/**",
+    "docs/**"
+  ],
+  "exclude": [
+    "backups/**",
+    "**/__pycache__/**",
+    "**/*.pyc"
+  ]
+}
