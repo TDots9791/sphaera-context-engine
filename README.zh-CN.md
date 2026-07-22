@@ -2,6 +2,12 @@
 
 [Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
 
+[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](docs/zh-CN/INSTALLATION.md)
+[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](docs/zh-CN/PERFORMANCE.md)
+[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](docs/zh-CN/INSTALLATION.md)
+[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](https://iustitia.tech/academy/sphaera-context-engine/)
+[![Access: source available](https://img.shields.io/badge/ACCESS-SOURCE--AVAILABLE-D7A94B?style=flat-square&labelColor=101918)](docs/zh-CN/SOURCE-AVAILABILITY.md)
+
 面向 AI 智能体的本地、可验证上下文引擎。
 
 Sphaera 为代码和文档建立可验证的本地工作地图。AI 只获得与当前任务相关的材料，重要结论保留回到原始来源的路径。同一张地图可服务不同智能体和模型；交付的上下文会自动适配模型可用的上下文窗口。
