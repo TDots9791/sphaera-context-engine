@@ -1,6 +1,8 @@
 # Sphaera context engine
 
-[Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
+[![Russian](https://img.shields.io/badge/LANGUAGE-RU-D7A94B?style=flat-square&labelColor=101918)](README.md)
+[![English](https://img.shields.io/badge/LANGUAGE-EN-4EA9A5?style=flat-square&labelColor=101918)](README.en.md)
+[![中文](https://img.shields.io/badge/LANGUAGE-ZH-0C5A58?style=flat-square&labelColor=101918)](README.zh-CN.md)
 
 [![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](README.en.md#architecture)
 [![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](README.en.md#evidence-context)
