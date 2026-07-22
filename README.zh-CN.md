@@ -2,10 +2,10 @@
 
 [Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
 
-[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](docs/zh-CN/INSTALLATION.md)
-[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](docs/zh-CN/PERFORMANCE.md)
-[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](docs/zh-CN/INSTALLATION.md)
-[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](https://iustitia.tech/academy/sphaera-context-engine/)
+[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](README.zh-CN.md#architecture)
+[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](README.zh-CN.md#evidence-context)
+[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](README.zh-CN.md#mcp-integration)
+[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](README.zh-CN.md#llama-cpp)
 [![Access: source available](https://img.shields.io/badge/ACCESS-SOURCE--AVAILABLE-D7A94B?style=flat-square&labelColor=101918)](docs/zh-CN/SOURCE-AVAILABILITY.md)
 
 面向 AI 智能体的本地、可验证上下文引擎。
@@ -32,13 +32,22 @@ Sphaera 为代码和文档建立可验证的本地工作地图。AI 只获得与
 
 Sphaera 让 AI 基于项目的当前工作地图工作，而不是面对无尽的文件夹。它找到与任务相关的材料，保留其与原始来源的关联，并向每个模型交付合适规模的上下文。这减少重复阅读，加快重要结论的核验，并让团队拥有一份统一的项目记忆，而不是分散在不同 AI 工具中的对话历史。
 
-### 项目记忆，而不是又一个 prompt
+<a id="architecture"></a>
+
+### 架构：本地项目记忆
 
 AI 不应在每次任务、更换智能体或模型时重新理解项目。Sphaera 在设备上维护持久、以证据为基础的地图：每个片段都有精确定位、来源指纹和依赖关系。文件变化时，只更新受影响的地图部分，而不是重建团队已经积累的工作认知。
 
+<a id="evidence-context"></a>
+
+### 上下文交付：证据，而非档案
+
 模型得到的既不是“zip 压缩包”，也不是失控的长文本，而是带有必需来源的 `ContextPack`。在上下文窗口紧张时，`capsule` 将证据拆为紧凑、可逐步展开的帧：先给出路径和关键事实，再给出所需片段与关系。因此，轻量本地模型也能沿着复杂任务推进，而不会失去回到来源的路径。
 
-### 工作体系的新能力
+<a id="mcp-integration"></a>
+<a id="llama-cpp"></a>
+
+### 模型、集成与工作体系
 
 | 体系 | 工作方式 | 实际结果 |
 |---|---|---|
