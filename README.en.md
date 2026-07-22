@@ -2,10 +2,10 @@
 
 [Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
 
-[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](docs/en/INSTALLATION.md)
-[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](docs/en/PERFORMANCE.md)
-[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](docs/en/INSTALLATION.md)
-[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](https://iustitia.tech/academy/sphaera-context-engine/)
+[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](README.en.md#architecture)
+[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](README.en.md#evidence-context)
+[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](README.en.md#mcp-integration)
+[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](README.en.md#llama-cpp)
 [![Access: source available](https://img.shields.io/badge/ACCESS-SOURCE--AVAILABLE-D7A94B?style=flat-square&labelColor=101918)](docs/en/SOURCE-AVAILABILITY.md)
 
 Local, evidence-first context engine for AI agents.
@@ -32,13 +32,22 @@ This is Sphaera's public product repository: documentation, examples, roadmap, d
 
 Sphaera lets AI work from a current map of a project rather than an endless folder of files. It finds task-relevant materials, preserves their connection to the original source, and delivers an appropriate amount of context to each model. This reduces repeated reading, speeds up verification of important conclusions, and gives a team one project memory instead of disconnected histories across AI tools.
 
-### Project memory, not another prompt
+<a id="architecture"></a>
+
+### Architecture: local project memory
 
 AI should not have to rediscover a project for every task, agent, or model. Sphaera maintains a durable, evidence-backed map on the device: each fragment has a precise locator, source fingerprint, and dependency links. When a file changes, the affected part of the map changes instead of the team's accumulated working knowledge being rebuilt.
 
+<a id="evidence-context"></a>
+
+### Context delivery: evidence, not an archive
+
 The model receives neither a "zip archive" nor an uncontrolled wall of text. It receives a `ContextPack` with required sources. Under a tight window, `capsule` splits evidence into compact expandable frames: route and key facts first, then the needed fragments and relations. A compact local model can therefore progress through a complex task without losing the path to source.
 
-### What is new in the working contour
+<a id="mcp-integration"></a>
+<a id="llama-cpp"></a>
+
+### Models, integrations, and the working contour
 
 | Contour | How it works | Practical result |
 |---|---|---|
