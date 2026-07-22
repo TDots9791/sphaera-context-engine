@@ -13,6 +13,7 @@ This is Sphaera's public product repository: documentation, examples, roadmap, d
 - Product page: https://iustitia.tech/academy/sphaera-context-engine/
 - Installation: [docs/en/INSTALLATION.md](docs/en/INSTALLATION.md)
 - Source availability: [docs/en/SOURCE-AVAILABILITY.md](docs/en/SOURCE-AVAILABILITY.md)
+- Performance and full indexing: [docs/en/PERFORMANCE.md](docs/en/PERFORMANCE.md)
 - Security reporting: [SECURITY.en.md](SECURITY.en.md)
 
 ## Who it is for
