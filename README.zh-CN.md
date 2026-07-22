@@ -13,6 +13,7 @@ Sphaera 为代码和文档建立可验证的本地工作地图。AI 只获得与
 - 产品页面：https://iustitia.tech/academy/sphaera-context-engine/
 - 安装说明：[docs/zh-CN/INSTALLATION.md](docs/zh-CN/INSTALLATION.md)
 - 源码可用性：[docs/zh-CN/SOURCE-AVAILABILITY.md](docs/zh-CN/SOURCE-AVAILABILITY.md)
+- 性能与完整索引：[docs/zh-CN/PERFORMANCE.md](docs/zh-CN/PERFORMANCE.md)
 - 安全问题反馈：[SECURITY.zh-CN.md](SECURITY.zh-CN.md)
 
 ## 适用对象
