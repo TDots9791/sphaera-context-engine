@@ -2,10 +2,10 @@
 
 [Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
 
-[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](docs/INSTALLATION.md)
-[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](docs/PERFORMANCE.md)
-[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](docs/INSTALLATION.md)
-[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](https://iustitia.tech/academy/sphaera-context-engine/)
+[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](README.md#architecture)
+[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](README.md#evidence-context)
+[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](README.md#mcp-integration)
+[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](README.md#llama-cpp)
 [![Access: source available](https://img.shields.io/badge/ACCESS-SOURCE--AVAILABLE-D7A94B?style=flat-square&labelColor=101918)](docs/SOURCE-AVAILABILITY.md)
 
 Локальный движок точного контекста для AI-агентов.
@@ -32,13 +32,22 @@ Sphaera собирает проверяемую локальную карту к
 
 Sphaera помогает AI работать не с бесконечной папкой файлов, а с актуальной рабочей картой проекта. Она находит относящиеся к задаче материалы, сохраняет их связь с первоисточником и выдаёт модели посильный объём контекста. Это уменьшает повторное чтение, ускоряет проверку важных выводов и даёт команде одну память проекта вместо разрозненных историй разных AI-инструментов.
 
-### Не новый prompt, а проектная память
+<a id="architecture"></a>
+
+### Архитектура: локальная project memory
 
 AI не должен заново понимать проект при каждой задаче, смене агента или модели. Sphaera поддерживает на устройстве долговечную evidence-карту: фрагменты имеют точный адрес, отпечаток источника и связи с зависимостями. При изменении файла обновляется затронутый участок карты, а не вся история работы команды.
 
+<a id="evidence-context"></a>
+
+### Доставка контекста: evidence, а не архив
+
 Модель получает не «zip-архив» и не бесконтрольную простыню текста, а `ContextPack` с обязательными источниками. При тесном окне `capsule` разбивает доказательства на компактные раскрываемые кадры: сначала маршрут и ключевые факты, затем нужные фрагменты и связи. Поэтому компактная локальная модель может последовательно пройти сложную задачу, не теряя путь к исходнику.
 
-### Что нового в рабочем контуре
+<a id="mcp-integration"></a>
+<a id="llama-cpp"></a>
+
+### Модели, интеграции и рабочий контур
 
 | Контур | Как работает | Практический результат |
 |---|---|---|
