@@ -13,6 +13,7 @@ Sphaera собирает проверяемую локальную карту к
 - Официальная страница: https://iustitia.tech/academy/sphaera-context-engine/
 - Установка: [docs/INSTALLATION.md](docs/INSTALLATION.md)
 - Исходный код: [docs/SOURCE-AVAILABILITY.md](docs/SOURCE-AVAILABILITY.md)
+- Производительность и полный индекс: [docs/PERFORMANCE.md](docs/PERFORMANCE.md)
 - Сообщить об уязвимости: [SECURITY.md](SECURITY.md)
 
 ## Для кого
