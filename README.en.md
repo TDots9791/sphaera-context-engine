@@ -2,6 +2,12 @@
 
 [Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
 
+[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](docs/en/INSTALLATION.md)
+[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](docs/en/PERFORMANCE.md)
+[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](docs/en/INSTALLATION.md)
+[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](https://iustitia.tech/academy/sphaera-context-engine/)
+[![Access: source available](https://img.shields.io/badge/ACCESS-SOURCE--AVAILABLE-D7A94B?style=flat-square&labelColor=101918)](docs/en/SOURCE-AVAILABILITY.md)
+
 Local, evidence-first context engine for AI agents.
 
 Sphaera builds a verifiable local working map of code and documents. AI receives the materials relevant to its task, while important conclusions retain a path back to the original source. One map works across agents and models; the delivered context adapts to the available context window.

@@ -2,6 +2,12 @@
 
 [Русский](README.md) · [English](README.en.md) · [中文](README.zh-CN.md)
 
+[![Architecture: local-first](https://img.shields.io/badge/ARCHITECTURE-LOCAL--FIRST-0C5A58?style=flat-square&labelColor=101918)](docs/INSTALLATION.md)
+[![Context: evidence-first](https://img.shields.io/badge/CONTEXT-EVIDENCE--FIRST-4EA9A5?style=flat-square&labelColor=101918)](docs/PERFORMANCE.md)
+[![Protocol: MCP](https://img.shields.io/badge/PROTOCOL-MCP-176D69?style=flat-square&labelColor=101918)](docs/INSTALLATION.md)
+[![Local AI: llama.cpp](https://img.shields.io/badge/LOCAL--AI-LLAMA.CPP-4EA9A5?style=flat-square&labelColor=101918)](https://iustitia.tech/academy/sphaera-context-engine/)
+[![Access: source available](https://img.shields.io/badge/ACCESS-SOURCE--AVAILABLE-D7A94B?style=flat-square&labelColor=101918)](docs/SOURCE-AVAILABILITY.md)
+
 Локальный движок точного контекста для AI-агентов.
 
 Sphaera собирает проверяемую локальную карту кода и документов: AI получает только относящиеся к задаче материалы, а важные выводы сохраняют путь к исходному фрагменту. Одна карта работает с разными агентами и моделями; размер выдачи автоматически подстраивается под доступное контекстное окно.
