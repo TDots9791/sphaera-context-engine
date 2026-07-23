@@ -22,6 +22,7 @@ Sphaera собирает проверяемую локальную карту к
 - Установка: [docs/INSTALLATION.md](docs/INSTALLATION.md)
 - Исходный код: [docs/SOURCE-AVAILABILITY.md](docs/SOURCE-AVAILABILITY.md)
 - Производительность и полный индекс: [docs/PERFORMANCE.md](docs/PERFORMANCE.md)
+- Контракт полного отчёта графа: [docs/FULL-GRAPH-REPORT.md](docs/FULL-GRAPH-REPORT.md)
 - Сообщить об уязвимости: [SECURITY.md](SECURITY.md)
 
 ## Для кого
