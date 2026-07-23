@@ -22,6 +22,7 @@ This is Sphaera's public product repository: documentation, examples, roadmap, d
 - Installation: [docs/en/INSTALLATION.md](docs/en/INSTALLATION.md)
 - Source availability: [docs/en/SOURCE-AVAILABILITY.md](docs/en/SOURCE-AVAILABILITY.md)
 - Performance and full indexing: [docs/en/PERFORMANCE.md](docs/en/PERFORMANCE.md)
+- Full graph-report contract: [docs/en/FULL-GRAPH-REPORT.md](docs/en/FULL-GRAPH-REPORT.md)
 - Security reporting: [SECURITY.en.md](SECURITY.en.md)
 
 ## Who it is for
