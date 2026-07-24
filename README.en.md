@@ -14,6 +14,8 @@ Local, evidence-first context engine for AI agents.
 
 Sphaera builds a verifiable local working map of code and documents. AI receives the materials relevant to its task, while important conclusions retain a path back to the original source. One map works across agents and models; the delivered context adapts to the available context window.
 
+The foundation is on-device work: a local database and CLI, with no mandatory server or external services. Sphaera understands **29 code modes** (Rust, Python, JS/TS, Go, C/C++, C#, Java, Kotlin, Swift, PHP, Ruby, SQL, Bash, PowerShell, Dockerfile, and more) and **11 document formats** (DOCX, PDF, XLSX, ODS, PPTX, XML, CSV/TSV, Markdown, HTML, JSON) — 40 structured adapters in total. Russian is a native mode with morphology awareness; English is supported and Chinese materials are indexed.
+
 ## What is in this repository
 
 This is Sphaera's public product repository: documentation, examples, roadmap, discussions, and issue reporting. Official signed distributions, licenses, updates, and support are issued only through the website.
@@ -22,6 +24,7 @@ This is Sphaera's public product repository: documentation, examples, roadmap, d
 - Installation: [docs/en/INSTALLATION.md](docs/en/INSTALLATION.md)
 - Source availability: [docs/en/SOURCE-AVAILABILITY.md](docs/en/SOURCE-AVAILABILITY.md)
 - Performance and full indexing: [docs/en/PERFORMANCE.md](docs/en/PERFORMANCE.md)
+- Connected graph (code, documents, project context) and work resumption: [docs/en/CONNECTED-GRAPH.md](docs/en/CONNECTED-GRAPH.md)
 - Full graph-report contract: [docs/en/FULL-GRAPH-REPORT.md](docs/en/FULL-GRAPH-REPORT.md)
 - Security reporting: [SECURITY.en.md](SECURITY.en.md)
 
@@ -56,11 +59,13 @@ The model receives neither a "zip archive" nor an uncontrolled wall of text. It 
 |---|---|---|
 | **Models without a name catalog** | Sphaera resolves provider rules and the connected model's available window; unknown IDs do not need a brittle exception list | One project context for cloud AI and local `llama.cpp`; the 6B/9B compact-model path is verified, with a variable window up to 2M tokens |
 | **Context delivery** | `ContextPack` and capsule frames retain required evidence, constraints, and exact locators | The model sees less noise but can expand proof step by step rather than guess from a summary |
-| **Code, documents, and provenance** | 40 structured adapters and a graph of sources, transformations, and dependent results keep facts, inferences, conflicts, and gaps distinct | One working memory joins code with PDFs, agreements, tables, slides, and AI output |
+| **Code, documents, and provenance** | 40 structured adapters (29 code modes + 11 document formats) and a graph of sources, transformations, and dependent results keep facts, inferences, conflicts, and gaps distinct | One working memory joins code with PDFs, agreements, tables, slides, and AI output |
+| **Links across code, documents, and reasoning** | Three graph orientations — code, documents, and project context — are stored separately but joined by verifiable edges: a document clause → code file by path mention, agreement ↔ addendum ↔ invoice by shared identifier, a reasoning step → the nodes it depends on. Edge integrity is validated separately | Move from a document clause to code and back, find related documents across formats by a shared entity, and see which decision rests on what |
+| **Resuming long work** | `resume` assembles a compact skeleton of a reasoning thread sized to the model window: open questions first, then decisions and facts, each with the addresses of the nodes it touches. When a source changes, dependent steps are flagged for recheck | A small local model continues a complex multi-day task from a skeleton with addresses instead of re-reading the whole dialogue; notes do not go stale silently |
 | **Fast full indexing** | On a large change, adaptive pre-index creates verified JSONL shards in parallel and commits through one SQLite writer; shards disappear only after commit and graph validation | Faster full passes without losing resumable work or corrupting durable storage |
 | **Reliable local storage** | Compaction makes a verified backup; locks and watchers are designed for independent Sphaera instances | Multiple agents can maintain different projects and databases at the same time without contour conflicts |
 | **Acceleration without marketing substitution** | Sphaera detects CUDA-capable GPU; graphing, structural extraction, and SQLite remain CPU-bound while external local `llama.cpp` workers can use GPU | Acceleration status stays honest: GPU is not presented as a graph accelerator, yet remains available to local semantic components |
-| **Integration** | Local CLI, MCP, and skills for Codex, Claude Code, OpenCode, and ZCode use the same map | An agent receives verifiable context in its normal workflow, without a separate server |
+| **Integration** | The foundation is local work through the CLI and an on-device database; skills for Codex, Claude Code, OpenCode, and ZCode use the same map. The local MCP server (`mcp-stdio`) is an optional surface, not a requirement | An agent receives verifiable context in its normal workflow, without a separate server and without mandatory MCP |
 
 ### Scale: measured, not promised
 
@@ -71,6 +76,7 @@ Full indexing should not turn into hours of waiting. In local validation on a do
 - **Less paid re-reading.** A new task or model does not have to reload an already familiar project. Sphaera reuses its local working map and adds only what changed or matters now.
 - **Expensive models spend effort on reasoning, not search.** For models with costly input tokens, Sphaera suppresses material that is not needed for the task. Actual savings can be checked on a customer's own corpus and against the selected AI provider's usage data; no universal ROI percentage is promised.
 - **Small models get context sized for large tasks.** Instead of an unmanageable archive, they receive a concise guide, key fragments, exact source locations, and sequential context. This enables economical models to work effectively with complex projects, documents, and tables within their context window.
+- **Long work does not fall apart.** For multi-day, multi-step tasks Sphaera holds a reasoning skeleton — open questions, decisions, and facts with the addresses of the code and documents they touch — and delivers it compactly within the model window. A small local model resumes from that skeleton rather than the entire prior dialogue; when a source changes, dependent steps are flagged for recheck.
 - **Predictable Sphaera cost.** The subscription does not add a markup to your AI provider's tokens and does not limit the number of supported AI agents, models, IDEs, or platforms within licensed users and devices.
 
 ### Technical value without extra infrastructure
@@ -98,7 +104,7 @@ Quality does not come from a count of isolated commands. It comes from one conne
 | Layer | Verified coverage | What the user gets |
 |---|---|---|
 | Materials | **40 structured adapters:** 29 code modes and 11 document formats | One working contour for repositories, tables, agreements, PDFs, and processing results |
-| Relationships | One local map of sources, transformations, and dependent results | A path from conclusion to source and visibility into what a change affects |
+| Relationships | One local map of sources, transformations, and dependent results; three orientations (code, documents, project context) joined by verifiable edges | A path from conclusion to source, from a document clause to code and back, and visibility into what a change affects |
 | Context | One data foundation with adaptive delivery for different AI models | Small models receive connected working context; large models do not spend their window on already-known material |
 | Quality control | Compatibility matrices, automated checks, and benchmark suites for advertised capabilities | Claims can be checked against a stated version and corpus rather than taken on trust |
 
