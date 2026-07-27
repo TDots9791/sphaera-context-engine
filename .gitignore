@@ -1,0 +1,12 @@
+.sphaera/
+target/
+target-*/
+bin/
+*.sphaera
+*.key
+*.pem
+*.pfx
+.env
+.env.*
+!.env.example
+*.log
